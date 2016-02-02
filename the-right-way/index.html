@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title>Why our dog is way tighter than yours</title>
+  <script>
+  // var currentTime = new Date().getHours();
+  // if (7 <= currentTime&&currentTime < 20) {
+  //   document.write("<link rel='stylesheet' href='../day.css' type='text/css'>");
+  // }
+  // else {
+  //   if (document.write) {
+  //     document.write("<link rel='stylesheet' href='../night.css' type='text/css'>");
+  //   }
+  // }
+  </script>
+</head>
+<body>
+  <blockquote>The world is run by those who show up.  Marnie shows up.</blockquote>
+  <p>Hello
+    alskdjflksjdfjlaksjf kljadjfajkdf <strong>I am Michael</strong>
+  </p>
+  <hr>
+  <img src="http://i.ytimg.com/vi/Ljm4Uv0KCSQ/maxresdefault.jpg" width="925" height="474" alt="marnie the dog"/>
+  <ul>
+    <li>Furry</li>
+    <li>Size</li>
+    <li>Petting</li>
+  </ul>
+  <input type="text" placeholder="Doggie">
+  <div>
+    <h1>We could be high-key</h1>
+    <h2>Keep it on the Lolo</h2>
+    <a href="blah.com/"> Blah</a>
+    <p>Who Keeps It Triller?</p>
+  </div>
+  <h1>Welcome to my program!</h1>
+  <button onclick="changeBackground()">Background</button>
+  <p id="counter">
+  </p>
+</body>
+<script type="text/javascript">
+var setting = parseInt(localStorage.getItem('Background'));
+if (setting === null){
+  setting = 0;}
+  if(setting === 0) {
+    document.body.setAttribute('style', 'color:yellow')
+    document.body.background = "http://www.thebigboot.com/wp-content/uploads/2015/07/sunshine.jpg";
+  }
+  else{
+    document.body.setAttribute('style', 'color:white')
+    document.body.background = "http://www.whatsonyourwall.com/landscape-scenic-7/scenic-night-time-ocean-colour-black-16332-29629_medium.jpg";}
+
+    function updateBackground() {
+      if(setting===0)  {
+        document.body.setAttribute('style', 'color:yellow')
+        document.body.background = "http://www.thebigboot.com/wp-content/uploads/2015/07/sunshine.jpg";
+      }
+      else {
+        document.body.setAttribute('style', 'color:white')
+        document.body.background = "http://www.whatsonyourwall.com/landscape-scenic-7/scenic-night-time-ocean-colour-black-16332-29629_medium.jpg";
+      }
+    }
+
+    function changeBackground() {
+      console.log(setting===0)
+      if(setting === 0) {
+        setting = 1;
+        localStorage.setItem('Background', 1);
+      }
+      else {
+        setting = 0;
+        localStorage.setItem('Background', 0 );
+      }
+      updateBackground()
+    }
+    updateBackground()
+    var visits = parseInt(localStorage.getItem('visits'));
+    console.log(visits);
+    if (isNaN(visits)){
+      visits = 0;}
+      visits = visits + 1;
+      document.getElementById("counter").innerHTML = visits;
+      localStorage.setItem('visits', visits);
+    </script>
+
+    <noscript><link href="main.css" rel="stylesheet"></noscript>
+  </script>
+  </html>
